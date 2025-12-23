@@ -159,7 +159,6 @@ trainTransform = transforms.Compose([
     transforms.ColorJitter(brightness=0.1, contrast=0.1), #Alter brightness & contrast by between -10% to 10%
     transforms.ToTensor(),
     transforms.Normalize([0.5], [0.5]),
-    #transforms.RandomErasing(p=0.4, scale=(0.02, 0.12))  #Gentle, safe random erasing
 ])
 
 #Transformation for testing dataset
