@@ -158,8 +158,7 @@ trainTransform = transforms.Compose([
     transforms.RandomAffine(degrees=10, translate=(0.03, 0.03), scale=(0.9, 1.1), shear=3,fill=128),
     transforms.ColorJitter(brightness=0.1, contrast=0.1), #Alter brightness & contrast by between -10% to 10%
     transforms.ToTensor(),
-    transforms.Normalize([0.5], [0.5]),
-    #transforms.RandomErasing(p=0.5, scale=(0.02, 0.15))  #Random erasing
+    transforms.Normalize([0.5], [0.5])
 ])
 
 #Transformation for testing dataset
@@ -357,3 +356,4 @@ def showSample(idxList, title): #Function for dislaying images
 
 showSample(sampleCorrect, "Correct Predictions")
 showSample(sampleIncorrect, "Incorrect Predictions")
+
