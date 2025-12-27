@@ -30,9 +30,9 @@ Note:
 ## Results
 |File                  |Memory |Test Data Accuracy
 |:---------------------|:------|--------:
-|resnet50_1.py         |ResNet50 model, augmentations (crop, flip, rotation, color jitter), early stopping
-|resnet50_2.py         |ResNet50 model, augmentations (crop, flip, affine, color jitter), early stopping
-|resnet50_3.py         |Same as v2, plus validation loss as tiebreaker when ≥2 epochs have max accuracy
-|resnet50_3smoothing.py|Same as v3, plus label smoothing
-|resnet50_4.py         |Same as v3, plus Mixup augmentation with constant alpha values {0.05, 0.1, 0.2}
-|resnet50_5.py         |Same as v3, plus Mixup augmentation with linear‑decaying alpha (max=0.2, decay=2)
+|resnet50_1.py         |
+|resnet50_2.py         |
+|resnet50_3.py         |
+|resnet50_3smoothing.py|
+|resnet50_4.py         |
+|resnet50_5.py         |
