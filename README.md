@@ -38,3 +38,6 @@ Note:
 |resnet50_4.py (alpha=0.10)            |89.26
 |resnet50_4.py (alpha=0.20)            |89.74
 |resnet50_5.py (max_alpha=0.2, decay=2)|90.06
+
+## Data Attribution
+This project uses chest X-ray images (normal and with pneumonia) obtained from Guangzhou Women and Children’s Medical Center, Guangzhou. The whole dataset can be downloaded from Kaggle (https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia/data). The dataset is licensed under CC BY 4.0.
