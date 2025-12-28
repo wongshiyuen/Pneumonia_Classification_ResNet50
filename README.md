@@ -11,29 +11,30 @@ Medical image classification project: Chest X‑rays (Normal vs Pneumonia) using
 |resnet50_4.py         |Same as v3, plus Mixup augmentation with constant alpha values {0.05, 0.1, 0.2}
 |resnet50_5.py         |Same as v3, plus Mixup augmentation with linear‑decaying alpha (max=0.2, decay=2)
 
-Note:
+**Notes:**
 * Early stopping is implemented in all versions.
 * Validation loss is used as a tiebreaker in versions 3–5.
 * Mixup augmentation is introduced in versions 4 and 5 with different alpha strategies.
 * Files include code for creating confusion matrices, classification reports, and ROC curves.
 
 ## Requirements
-* Python ≥ 3.8 (version 3.11.9 for reproducibility)
-* PyTorch ≥ 1.10 (version 2.5.1+cu121 for reproducibility)
-* torchvision ≥ 0.11 (version 0.20.1+cu121 for reproducibility)
-* numpy (version 2.1.3 for reproducibility)
-* matplotlib (version 3.10.3 for reproducibility)
-* seaborn (version 0.13.2 for reproducibility)
-* psutil (version 7.1.3 for reproducibility)
-* scikit‑learn (version 1.7.1 for reproducibility)
+* Python ≥ 3.8 (tested with version 3.11.9)
+* PyTorch ≥ 1.10 (tested with version 2.5.1+cu121)
+* torchvision ≥ 0.11 (tested with version 0.20.1+cu121)
+* numpy (tested with version 2.1.3)
+* matplotlib (tested with version 3.10.3)
+* seaborn (tested with version 0.13.2)
+* psutil (tested with version 7.1.3)
+* scikit‑learn (tested with version 1.7.1)
 
 ## Getting Started
 The following are the procedures for downloading and training the models in this repository using the Chest X-ray Images (Pneumonia) dataset:
 
 1. Download the Chest X-ray Images (Pneumonia) dataset from Kaggle (or any other available repositories). The dataset contains 3 main folders ('train', 'test', and 'val'), with 2 subfolders ('normal' and 'pneumonia') in each folder.
-2. Download the '.py' file of interest (or all of them) from the 'experiments' section of this repository. Ensure the '.py' file(s) are downloaded into the same folder as the 'train', 'test', and 'val' folders.
-3. Open cmd, change directory to where dataset folder is located.
-4. Run the '.py' file of interest by typing 'python <insert '.py' filename here>'
+2. Download the '.py' file of interest (or all of them) from the 'experiments' section, as well as 'requirements.txt', from this repository. Ensure the file(s) are downloaded into the same folder containing the 'train', 'test', and 'val' subfolders.
+3. Open cmd/terminal and change directory to dataset folder.
+4. Install required packages by typing 'pip install -r requirements.txt' into cmd.
+5. Run the '.py' file of interest by typing 'python <insert '.py' filename here>' into cmd.
 
 ## Results
 |File                                  |Test Data Accuracy (%)
@@ -50,4 +51,4 @@ The following are the procedures for downloading and training the models in this
 NOTE: In order to reproduce results here for resnet50_4.py, please alter the value of alpha as necessary.
 
 ## Data Attribution
-This project uses chest X-ray images (normal and with pneumonia) obtained from Guangzhou Women and Children’s Medical Center, Guangzhou. The whole dataset can be downloaded from Kaggle (https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia/data). The dataset is licensed under CC BY 4.0.
+This project uses chest X-ray images (normal and with pneumonia) obtained from Guangzhou Women and Children’s Medical Center, Guangzhou. Dataset available on Kaggle (https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia/data). Licensed under **CC BY 4.0**.
