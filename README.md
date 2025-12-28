@@ -18,14 +18,14 @@ Note:
 * Files include code for creating confusion matrices, classification reports, and ROC curves.
 
 ## Requirements
-* Python ≥ 3.8 (3.11.9 for reproducibility)
-* PyTorch ≥ 1.10 (2.5.1+cu121 for reproducibility)
-* torchvision ≥ 0.11 (0.20.1+cu121 for reproducibility)
-* numpy
-* matplotlib
-* seaborn
-* psutil
-* scikit‑learn
+* Python ≥ 3.8 (version 3.11.9 for reproducibility)
+* PyTorch ≥ 1.10 (version 2.5.1+cu121 for reproducibility)
+* torchvision ≥ 0.11 (version 0.20.1+cu121 for reproducibility)
+* numpy (version 2.1.3 for reproducibility)
+* matplotlib (version 3.10.3 for reproducibility)
+* seaborn (version 0.13.2 for reproducibility)
+* psutil (version 7.1.3 for reproducibility)
+* scikit‑learn (version 1.7.1 for reproducibility)
 
 ## Getting Started
 The following are the procedures for downloading and training the models in this repository using the Chest X-ray Images (Pneumonia) dataset:
