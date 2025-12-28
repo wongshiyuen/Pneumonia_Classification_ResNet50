@@ -18,9 +18,9 @@ Note:
 * Files include code for creating confusion matrices, classification reports, and ROC curves.
 
 ## Requirements
-* Python ≥ 3.8
-* PyTorch ≥ 1.10
-* torchvision ≥ 0.11
+* Python ≥ 3.8 (3.11.9 for reproducibility)
+* PyTorch ≥ 1.10 (2.5.1+cu121 for reproducibility)
+* torchvision ≥ 0.11 (0.20.1+cu121 for reproducibility)
 * numpy
 * matplotlib
 * seaborn
@@ -28,11 +28,13 @@ Note:
 * scikit‑learn
 
 ## Results
-|File                  |Memory |Test Data Accuracy
-|:---------------------|:------|--------:
-|resnet50_1.py         |
-|resnet50_2.py         |
-|resnet50_3.py         |
-|resnet50_3smoothing.py|
-|resnet50_4.py         |
-|resnet50_5.py         |
+|File                                  |Test Data Accuracy (%)
+|:-------------------------------------|-----------------------:
+|resnet50_1.py                         |87.98
+|resnet50_2.py                         |89.74
+|resnet50_3.py                         |**91.35**
+|resnet50_3smoothing.py                |90.38
+|resnet50_4.py (alpha=0.05)            |91.03
+|resnet50_4.py (alpha=0.10)            |89.26
+|resnet50_4.py (alpha=0.20)            |89.74
+|resnet50_5.py (max_alpha=0.2, decay=2)|90.06
