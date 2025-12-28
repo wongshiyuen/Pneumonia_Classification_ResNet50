@@ -27,6 +27,14 @@ Note:
 * psutil
 * scikit‑learn
 
+## Getting Started
+The following are the procedures for downloading and training the models in this repository using the Chest X-ray Images (Pneumonia) dataset:
+
+1. Download the Chest X-ray Images (Pneumonia) dataset from Kaggle (or any other available repositories). The dataset contains 3 main folders ('train', 'test', and 'val'), with 2 subfolders ('normal' and 'pneumonia') in each folder.
+2. Download the '.py' file of interest (or all of them) from the 'experiments' section of this repository. Ensure the '.py' file(s) are downloaded into the same folder as the 'train', 'test', and 'val' folders.
+3. Open cmd, change directory to were dataset folder is located.
+4. Run the '.py' file of interest by typing 'python <insert '.py' filename here>'
+
 ## Results
 |File                                  |Test Data Accuracy (%)
 |:-------------------------------------|-----------------------:
@@ -38,6 +46,8 @@ Note:
 |resnet50_4.py (alpha=0.10)            |89.26
 |resnet50_4.py (alpha=0.20)            |89.74
 |resnet50_5.py (max_alpha=0.2, decay=2)|90.06
+
+NOTE: In order to reproduce results here for resnet50_4.py, please alter the value of alpha as necessary.
 
 ## Data Attribution
 This project uses chest X-ray images (normal and with pneumonia) obtained from Guangzhou Women and Children’s Medical Center, Guangzhou. The whole dataset can be downloaded from Kaggle (https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia/data). The dataset is licensed under CC BY 4.0.
