@@ -1,5 +1,5 @@
 #Requirements file for reproducibility of results
-Python==3.11.9
+#Tested using Python 3.11.9
 PyTorch==2.5.1+cu121
 torchvision==0.20.1+cu121
 numpy==2.1.3
