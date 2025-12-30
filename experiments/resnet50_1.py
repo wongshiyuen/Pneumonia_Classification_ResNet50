@@ -1,6 +1,3 @@
-#NOTE: Combine training and validation, resplit into 80/20
-#Validation data in original provided dataset is too small 
-
 import torch
 import torch.nn as nn
 import torch.optim as optim
