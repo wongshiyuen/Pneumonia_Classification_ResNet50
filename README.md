@@ -9,7 +9,7 @@ Medical image classification project: Chest X‑rays (Normal vs Pneumonia) using
 |experiments|resnet50_3.py         |Same as v2, plus validation loss as tiebreaker when ≥2 epochs have max accuracy
 |experiments|resnet50_3smoothing.py|Same as v3, plus label smoothing
 |experiments|resnet50_4.py         |Same as v3, plus Mixup augmentation with constant alpha values {0.05, 0.1, 0.2}
-|           |resnet50_5.py         |Same as v3, plus Mixup augmentation with linear‑decaying alpha (max=0.2, decay=2)
+|experiments|resnet50_5.py         |Same as v3, plus Mixup augmentation with linear‑decaying alpha (max=0.2, decay=2)
 
 **Notes:**
 * Early stopping is implemented in all versions.
