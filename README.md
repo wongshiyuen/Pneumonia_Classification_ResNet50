@@ -3,15 +3,15 @@ Medical image classification project: Chest X‑rays (Normal vs Pneumonia) using
 
 ## Repository Contents
 |File                  |Key Features
-|:---------------------|:---------------------------------------------------------------------------------
+|:---------------------|:-------------------------------------------------------------------------------------------------
 |resnet50_1.py         |ResNet50 model, augmentations (crop, flip, rotation, color jitter), early stopping
 |resnet50_2.py         |ResNet50 model, augmentations (crop, flip, affine, color jitter), early stopping
 |resnet50_3.py         |Same as v2, plus validation loss as tiebreaker when ≥2 epochs have max accuracy
 |resnet50_3smoothing.py|Same as v3, plus label smoothing
 |resnet50_4.py         |Same as v3, plus Mixup augmentation with constant alpha values {0.05, 0.1, 0.2}
 |resnet50_5.py         |Same as v3, plus Mixup augmentation with linear‑decaying alpha (max=0.2, decay=2)
-|model.py              |Chosen model (resnet50_3.py) with highest accuracy out of all tested models
-|testTransform.py      |Image transforms for images in testing dataset for deployment purposes
+|model.py              |Contains code for ResNet50 model (separated from oher code for reusability)
+|testTransform.py      |Image transforms for images in testing dataset (separated from other code for ease of deployment)
 
 **Notes:**
 * Early stopping is implemented in all versions.
@@ -30,13 +30,13 @@ Medical image classification project: Chest X‑rays (Normal vs Pneumonia) using
 * scikit‑learn (tested with version 1.7.1)
 
 ## Getting Started
-The following are the procedures for downloading and training the models in this repository using the Chest X-ray Images (Pneumonia) dataset:
+The following are the procedures for downloading and training the models in this repository using the Chest X-ray Images (Pneumonia) dataset, followed by deployment:
 
 1. Download the Chest X-ray Images (Pneumonia) dataset from Kaggle (or any other available repositories). The dataset contains 3 main folders ('train', 'test', and 'val'), with 2 subfolders ('normal' and 'pneumonia') in each folder.
-2. Download the '.py' file of interest (or all of them) from the 'experiments' section, as well as 'requirements.txt', from this repository. Ensure the file(s) are downloaded into the same folder containing the 'train', 'test', and 'val' subfolders.
+2. Download the '.py' files from the 'experiments' section, as well as 'requirements.txt', from this repository. Ensure the file(s) are downloaded into the same folder containing the 'train', 'test', and 'val' subfolders.
 3. Open cmd/terminal and change directory to dataset folder.
 4. Install required packages by typing 'pip install -r requirements.txt' into cmd.
-5. Run the '.py' file of interest by typing 'python <insert '.py' filename here>' into cmd.
+5. Run any version of the 'resnet50' files by typing 'python <insert '.py' filename here>' into cmd (e.g.: python resnet50_1.py).
 
 ## Results
 |File                                  |Test Data Accuracy (%)
