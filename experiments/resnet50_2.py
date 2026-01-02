@@ -16,7 +16,7 @@ from sklearn.metrics import confusion_matrix, classification_report, roc_curve, 
 
 #Custom packages
 from model import ResnetBlock, Resnet50
-from testTransform import testTransform
+from testTransform import testImageTransform
 
 #Speeds up training when input image sizes are constant, model architecture doesn't change shape dynamically, and batch size is consistent
 torch.backends.cudnn.benchmark = True
@@ -75,8 +75,8 @@ trainTransform = transforms.Compose([
 #Read images in a folder-per-class structure, assigns each class name an integer index.
 #Returns a tuple for each image: (image_filepath, label(subfolder name)).
 trainDataset = datasets.ImageFolder(root=r'train', transform=trainTransform)
-valDataset = datasets.ImageFolder(root=r'val', transform=testTransform)
-testDataset = datasets.ImageFolder(root=r'test', transform=testTransform)
+valDataset = datasets.ImageFolder(root=r'val', transform=testImageTransform(imageSize))
+testDataset = datasets.ImageFolder(root=r'test', transform=testImageTransform(imageSize))
 
 #Provide iterator for fetching data in batches; handle batching, shuffling, & parallel loading.
 #Returns batches in the form of tuples (images, labels)
