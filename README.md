@@ -38,9 +38,6 @@ The following files and subfolders can be found in the 'experiments' folder:
 
 ## Getting Started
 The following are the procedures for downloading and training the models in this repository using the Chest X-ray Images (Pneumonia) dataset, followed by deployment:
-
-**Interpretation:**
-
 1. Download the Chest X-ray Images (Pneumonia) dataset from Kaggle (or any other available repositories). The dataset contains 3 main folders ('train', 'test', and 'val'), with 2 subfolders ('normal' and 'pneumonia') in each folder.
 2. Download the '.py' files from the 'experiments' section, as well as 'requirements.txt', from this repository. Ensure the file(s) are downloaded into the same folder containing the 'train', 'test', and 'val' subfolders.
 3. Open cmd/terminal and change directory to dataset folder.
@@ -60,6 +57,8 @@ The following are the procedures for downloading and training the models in this
 |resnet50_4.py (alpha=0.10)            |89.26
 |resnet50_4.py (alpha=0.20)            |89.74
 |resnet50_5.py (max_alpha=0.2, decay=2)|90.06
+
+**Interpretation:**
 
 1. resnet50_3.py achieved the highest accuracy (91.35%) due to validation loss tiebreaker.
 2. Mixup augmentation (v4, v5) improved robustness but reduced accuracy at higher alpha values.
