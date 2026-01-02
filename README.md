@@ -54,6 +54,10 @@ The following are the procedures for downloading and training the models in this
 |resnet50_4.py (alpha=0.20)            |89.74
 |resnet50_5.py (max_alpha=0.2, decay=2)|90.06
 
+1. resnet50_3.py achieved the highest accuracy (91.35%) due to validation loss tiebreaker.
+2. Mixup augmentation (v4, v5) improved robustness but reduced accuracy at higher alpha values.
+3. Label smoothing (v3smoothing) caused slight accuracy loss due to over-regularization.
+
 NOTE: In order to reproduce results here for resnet50_4.py, please alter the value of alpha as necessary.
 
 ## Data Attribution
