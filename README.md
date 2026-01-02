@@ -40,7 +40,7 @@ The following are the procedures for downloading and training the models in this
 3. Open cmd/terminal and change directory to dataset folder.
 4. Install required packages by typing 'pip install -r requirements.txt --index-url https://download.pytorch.org/whl/cu121' into cmd.
 5. Run any or all version of the 'resnet50' files by typing 'python <insert '.py' filename here>' into cmd (e.g.: python resnet50_1.py).
-6. Run app.py on cmd to deploy model with state dictionary providing highest model accuracy (from resnet50_3.py) by typing 'python -m streamlit run app.py ' into cmd.
+6. Run app.py to deploy model with state dictionary providing highest model accuracy (from resnet50_3.py) by typing 'python -m streamlit run app.py ' into cmd.
 
 ## Results
 |File                                  |Test Data Accuracy (%)
