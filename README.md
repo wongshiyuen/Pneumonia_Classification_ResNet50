@@ -2,16 +2,16 @@
 Medical image classification project: Chest X‑rays (Normal vs Pneumonia) using ResNet50.
 
 ## Repository Contents
-|Folder     |File                  |Key Features
-|:----------|:---------------------|:---------------------------------------------------------------------------------
-|experiments|resnet50_1.py         |ResNet50 model, augmentations (crop, flip, rotation, color jitter), early stopping
-|experiments|resnet50_2.py         |ResNet50 model, augmentations (crop, flip, affine, color jitter), early stopping
-|experiments|resnet50_3.py         |Same as v2, plus validation loss as tiebreaker when ≥2 epochs have max accuracy
-|experiments|resnet50_3smoothing.py|Same as v3, plus label smoothing
-|experiments|resnet50_4.py         |Same as v3, plus Mixup augmentation with constant alpha values {0.05, 0.1, 0.2}
-|experiments|resnet50_5.py         |Same as v3, plus Mixup augmentation with linear‑decaying alpha (max=0.2, decay=2)
-|deployment |chosenModel.py        |Chosen model (resnet50_3.py) with highest accuracy out of all tested models
-|deployment |testTransform.py      |Image transforms for images in testing dataset for deployment purposes
+|File                  |Key Features
+|:---------------------|:---------------------------------------------------------------------------------
+|resnet50_1.py         |ResNet50 model, augmentations (crop, flip, rotation, color jitter), early stopping
+|resnet50_2.py         |ResNet50 model, augmentations (crop, flip, affine, color jitter), early stopping
+|resnet50_3.py         |Same as v2, plus validation loss as tiebreaker when ≥2 epochs have max accuracy
+|resnet50_3smoothing.py|Same as v3, plus label smoothing
+|resnet50_4.py         |Same as v3, plus Mixup augmentation with constant alpha values {0.05, 0.1, 0.2}
+|resnet50_5.py         |Same as v3, plus Mixup augmentation with linear‑decaying alpha (max=0.2, decay=2)
+|model.py              |Chosen model (resnet50_3.py) with highest accuracy out of all tested models
+|testTransform.py      |Image transforms for images in testing dataset for deployment purposes
 
 **Notes:**
 * Early stopping is implemented in all versions.
