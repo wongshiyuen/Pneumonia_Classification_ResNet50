@@ -12,6 +12,7 @@ Medical image classification project: Chest X‑rays (Normal vs Pneumonia) using
 |resnet50_5.py         |Same as v3, plus Mixup augmentation with linear‑decaying alpha (max=0.2, decay=2)
 |model.py              |Contains code for ResNet50 model (separated from oher code for reusability)
 |testTransform.py      |Image transforms for images in testing dataset (separated from other code for ease of deployment)
+|app.py                |Code for deployment using streamlit
 
 **Notes:**
 * Early stopping is implemented in all versions.
@@ -28,6 +29,8 @@ Medical image classification project: Chest X‑rays (Normal vs Pneumonia) using
 * seaborn (tested with version 0.13.2)
 * psutil (tested with version 7.1.3)
 * scikit‑learn (tested with version 1.7.1)
+* Streamlit ≥ 1.20 (tested with version 1.52.2)
+* Pillow ≥ 9.0 (tested with version 11.3.0)
 
 ## Getting Started
 The following are the procedures for downloading and training the models in this repository using the Chest X-ray Images (Pneumonia) dataset, followed by deployment:
@@ -35,8 +38,9 @@ The following are the procedures for downloading and training the models in this
 1. Download the Chest X-ray Images (Pneumonia) dataset from Kaggle (or any other available repositories). The dataset contains 3 main folders ('train', 'test', and 'val'), with 2 subfolders ('normal' and 'pneumonia') in each folder.
 2. Download the '.py' files from the 'experiments' section, as well as 'requirements.txt', from this repository. Ensure the file(s) are downloaded into the same folder containing the 'train', 'test', and 'val' subfolders.
 3. Open cmd/terminal and change directory to dataset folder.
-4. Install required packages by typing 'pip install -r requirements.txt' into cmd.
-5. Run any version of the 'resnet50' files by typing 'python <insert '.py' filename here>' into cmd (e.g.: python resnet50_1.py).
+4. Install required packages by typing 'pip install -r requirements.txt --index-url https://download.pytorch.org/whl/cu121' into cmd.
+5. Run any or all version of the 'resnet50' files by typing 'python <insert '.py' filename here>' into cmd (e.g.: python resnet50_1.py).
+6. Run app.py on cmd to deploy model with state dictionary providing highest model accuracy.
 
 ## Results
 |File                                  |Test Data Accuracy (%)
