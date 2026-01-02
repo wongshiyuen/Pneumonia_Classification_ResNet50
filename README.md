@@ -2,6 +2,8 @@
 Medical image classification project: Chest X‑rays (Normal vs Pneumonia) using ResNet50.
 
 ## Repository Contents
+The following files and subfolders can be found in the 'experiments' folder:
+
 |File                  |Key Features
 |:---------------------|:-------------------------------------------------------------------------------------------------
 |resnet50_1.py         |ResNet50 model, augmentations (crop, flip, rotation, color jitter), early stopping
@@ -13,6 +15,8 @@ Medical image classification project: Chest X‑rays (Normal vs Pneumonia) using
 |model.py              |Contains code for ResNet50 model (separated from oher code for reusability)
 |testTransform.py      |Image transforms for images in testing dataset (separated from other code for ease of deployment)
 |app.py                |Code for deployment using streamlit
+|normal_sample         |Contains sample images from test dataset for 'normal' cases; for verifying Streamlit app without needing the full dataset
+|pneumonia_sample      |Contains sample images from test dataset for 'pneumonia' cases; for verifying Streamlit app without needing the full dataset
 
 **Notes:**
 * Early stopping is implemented in all versions.
@@ -35,12 +39,15 @@ Medical image classification project: Chest X‑rays (Normal vs Pneumonia) using
 ## Getting Started
 The following are the procedures for downloading and training the models in this repository using the Chest X-ray Images (Pneumonia) dataset, followed by deployment:
 
+**Interpretation:**
+
 1. Download the Chest X-ray Images (Pneumonia) dataset from Kaggle (or any other available repositories). The dataset contains 3 main folders ('train', 'test', and 'val'), with 2 subfolders ('normal' and 'pneumonia') in each folder.
 2. Download the '.py' files from the 'experiments' section, as well as 'requirements.txt', from this repository. Ensure the file(s) are downloaded into the same folder containing the 'train', 'test', and 'val' subfolders.
 3. Open cmd/terminal and change directory to dataset folder.
 4. Install required packages by typing 'pip install -r requirements.txt --index-url https://download.pytorch.org/whl/cu121' into cmd.
 5. Run any or all version of the 'resnet50' files by typing 'python <insert '.py' filename here>' into cmd (e.g.: python resnet50_1.py).
 6. Run app.py to deploy model with state dictionary providing highest model accuracy (from resnet50_3.py) by typing 'python -m streamlit run app.py ' into cmd.
+7. Images from the 'normal_sample' and 'pneumonia_sample' subfolders in this repository can be used for for verifying Streamlit app without needing the full dataset.
 
 ## Results
 |File                                  |Test Data Accuracy (%)
