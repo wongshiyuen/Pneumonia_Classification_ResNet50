@@ -9,10 +9,12 @@ The following files and subfolders can be found in the 'experiments' folder:
 |resnet50_1.py         |ResNet50 model, augmentations (crop, flip, rotation, color jitter), early stopping
 |resnet50_2.py         |ResNet50 model, augmentations (crop, flip, affine, color jitter), early stopping
 |resnet50_3.py         |Same as v2, plus validation loss as tiebreaker when ≥2 epochs have max accuracy
+|preactiv_resnet50_3.py|Same as v3, except pre-activation ResNet50 was used instead of classic ResNet50
 |resnet50_3smoothing.py|Same as v3, plus label smoothing
 |resnet50_4.py         |Same as v3, plus Mixup augmentation with constant alpha values {0.05, 0.1, 0.2}
 |resnet50_5.py         |Same as v3, plus Mixup augmentation with linear‑decaying alpha (max=0.2, decay=2)
-|model.py              |Contains code for ResNet50 model (separated from oher code for reusability)
+|model.py              |Contains code for ResNet50 model (separated from other code for reusability)
+|preactivModel.py      |Contains code for pre-activation ResNet50 model (separated from other code for reusability)
 |testTransform.py      |Image transforms for images in testing dataset (separated from other code for ease of deployment)
 |app.py                |Code for deployment using streamlit
 |normal_sample         |Contains sample images from test dataset for 'normal' cases; for verifying Streamlit app without needing the full dataset
@@ -52,6 +54,7 @@ The following are the procedures for downloading and training the models in this
 |resnet50_1.py                         |87.98
 |resnet50_2.py                         |89.74
 |resnet50_3.py                         |**91.35**
+|preactiv_resnet50_3.py                |90.54
 |resnet50_3smoothing.py                |90.38
 |resnet50_4.py (alpha=0.05)            |91.03
 |resnet50_4.py (alpha=0.10)            |89.26
@@ -63,6 +66,7 @@ The following are the procedures for downloading and training the models in this
 1. resnet50_3.py achieved the highest accuracy (91.35%) due to validation loss tiebreaker.
 2. Mixup augmentation (v4, v5) improved robustness but reduced accuracy at higher alpha values.
 3. Label smoothing (v3smoothing) caused slight accuracy loss due to over-regularization.
+4. Small differences (<1%) in test accuracy between resnet50_3.py and preactiv_resnet50_3.py, resnet50_3smoothing.py, as well as resnet50_4.py (alpha=0.05), might also be due to randomness rather than model or data augmentation method superiority.
 
 NOTE: In order to reproduce results here for resnet50_4.py, please alter the value of alpha as necessary.
 
