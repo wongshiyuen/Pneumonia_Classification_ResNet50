@@ -1,4 +1,3 @@
-#Chosen model with highest test accuracy
 #ResNet 50 classes extracted and placed in a separate script for deployment and reusability
 import torch
 import torch.nn as nn
@@ -93,4 +92,5 @@ class Resnet50(nn.Module):
         tensor = torch.flatten(tensor, 1)
         tensor = self.fc(tensor)
         return tensor
+
 #=====================================================================================================
